@@ -62,11 +62,9 @@ function createServer(config) {
         });
 
         connections.push(sshConnection, netConnection);
-        try
-        {
+        try {
             sshConnection.connect(config);
-        }catch(error)
-        {
+        } catch (error) {
             server.emit('error', error);
         }
     });
